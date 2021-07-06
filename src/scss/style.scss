@@ -1,0 +1,109 @@
+html {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+input,
+textarea,
+select,
+button {
+  outline: none;
+}
+input {
+  line-height: normal;
+}
+label,
+button {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: #232c33;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+$primary-color: #477995;
+
+.nav {
+  padding: 15px 10px;
+  padding-right: 0;
+  width: 75px;
+  height: 800px;
+  background: #333;
+  box-shadow: 15px 0 0 0 $primary-color;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.25s ease-in-out;
+  &:hover {
+    width: 300px;
+  }
+  &__menu {
+    width: 100%;
+    margin-top: 50px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__link {
+    padding: 15px 15px;
+    display: flex;
+    align-items: center;
+    color: #eee;
+    font-size: 17px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: relative;
+    &.active {
+      background-color: $primary-color;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: -30px;
+        right: 0;
+        width: 30px;
+        height: 30px;
+        border-radius: 100rem;
+        box-shadow: 15px 15px 0 0 $primary-color;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -30px;
+        right: 0;
+        width: 30px;
+        height: 30px;
+        border-radius: 100rem;
+        box-shadow: 15px -15px 0 0 $primary-color;
+      }
+    }
+    &-icon {
+      font-size: 30px;
+      margin-right: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
